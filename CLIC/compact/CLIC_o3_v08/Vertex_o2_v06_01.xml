@@ -57,7 +57,7 @@
         <constant name="VertexEndcap_rmin2" value="CentralBeamPipe_rmax + VertexEndcap_offset"/>
         <constant name="VertexEndcap_rmin3" value="CentralBeamPipe_rmax + VertexEndcap_offset"/>
         <constant name="VertexEndcap_rmin4" value="CentralBeamPipe_rmax + VertexEndcap_offset"/>
-        <constant name="VertexEndcapModuleThickness" value="1.05*mm"/>
+        <constant name="VertexEndcapModuleThickness" value="1.3*mm"/>
         <constant name="VertexEndcapOverlap" value="1*mm"/>
     </define>
     
@@ -124,17 +124,17 @@
             <module name="SiVertexEndcapModule1" vis="SiVertexModuleVis">
                 <trd x1="VertexEndcap_rmin1 * tan(pi/(VertexEndcapModules))+VertexEndcapOverlap*sin(pi/VertexEndcapModules)" x2="VertexEndcap_rmax * tan(pi/(VertexEndcapModules))+VertexEndcapOverlap*sin(pi/VertexEndcapModules)" z="(VertexEndcap_rmax - VertexEndcap_rmin1) / 2" />
                 <!-- Build slices top-down from innermost slice (closest to IP) to outer-most (away from IP)-->
-                <module_component thickness="0.005*cm" material="Silicon" sensitive="true" vis="SiVertexSensitiveVis"/>
-                <module_component thickness="0.005*cm" material="Silicon" vis="SiVertexPassiveVis"/>
-                <module_component thickness="0.95*mm" material="CarbonFiber_Vertex" vis="SiVertexPassiveVis" />
+                <module_component thickness="0.05*mm"  material="Silicon" sensitive="true" vis="SiVertexSensitiveVis"/>
+                <module_component thickness="0.18*mm"  material="Silicon" vis="SiVertexPassiveVis"/>
+                <module_component thickness="1.07*mm"  material="Air" vis="SiVertexPassiveVis" />
             </module>
             
             <module name="SiVertexEndcapModule2" vis="SiVertexModuleVis">
                 <trd x1="VertexEndcap_rmin1 * tan(pi/(VertexEndcapModules))+VertexEndcapOverlap*sin(pi/VertexEndcapModules)" x2="VertexEndcap_rmax * tan(pi/(VertexEndcapModules))+VertexEndcapOverlap*sin(pi/VertexEndcapModules)" z="(VertexEndcap_rmax - VertexEndcap_rmin1) / 2" />
                 <!-- Build slices top-down from innermost slice (closest to IP) to outer-most (away from IP)-->
-                <module_component thickness="0.95*mm" material="CarbonFiber_Vertex" vis="SiVertexPassiveVis" />
-                <module_component thickness="0.005*cm" material="Silicon" vis="SiVertexPassiveVis"/>
-                <module_component thickness="0.005*cm" material="Silicon" sensitive="true" vis="SiVertexSensitiveVis2"/>
+                <module_component thickness="1.07*mm"  material="Air" vis="SiVertexPassiveVis" />
+                <module_component thickness="0.18*mm"  material="Silicon" vis="SiVertexPassiveVis"/>
+                <module_component thickness="0.05*mm"  material="Silicon" sensitive="true" vis="SiVertexSensitiveVis2"/>
 
             </module>
             
