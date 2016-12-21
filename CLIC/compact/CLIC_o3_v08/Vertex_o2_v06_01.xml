@@ -30,8 +30,9 @@
         <constant name="VertexBarrel_r2" value="4.4*cm"/>
         <constant name="VertexBarrel_r3" value="5.8*cm"/>
         
-        <constant name="VertexBarrel_Sensitive_Thickness" value="5.000000000e-02*mm"/>
-        <constant name="VertexBarrel_Support_Thickness" value="1*mm"/>
+        <constant name="VertexBarrel_Sensitive_Thickness"   value="5.000000000e-02*mm"/>
+        <constant name="VertexBarrel_Support_Thickness"     value="5.000000000e-02*mm"/>
+        <constant name="VertexBarrel_DoubleLayer_Thickness" value="2.6*mm"/>
         
         <constant name="VertexBarrel_Layer1_width" value="13*mm"/>
         <constant name="VertexBarrel_Layer2_width" value="24*mm"/>
@@ -79,31 +80,31 @@
             <type_flags type=" DetType_TRACKER + DetType_PIXEL + DetType_VERTEX + DetType_BARREL"/>
 
             <layer nLadders="VertexBarrel_Layer1_Staves" phi0="0" id="0">
-                <ladder distance="VertexBarrel_r1+VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer1_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset"    material="CarbonFiber_Vertex" />
+                <ladder distance="VertexBarrel_r1+VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer1_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset"    material="CarbonFiber_Vertex" />
                 <sensitive distance="VertexBarrel_r1" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer1_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset" material="Silicon"/>
             </layer>
             <layer nLadders="VertexBarrel_Layer1_Staves" phi0="0" id="1">
-                <ladder distance="VertexBarrel_r1+VertexBarrel_Sensitive_Thickness+VertexBarrel_Support_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer1_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset"    material="CarbonFiber_Vertex" />
-                <sensitive distance="VertexBarrel_r1+VertexBarrel_Sensitive_Thickness+2*VertexBarrel_Support_Thickness" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer1_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset" material="Silicon"/>
+                <ladder distance="VertexBarrel_r1+VertexBarrel_DoubleLayer_Thickness-VertexBarrel_Sensitive_Thickness-VertexBarrel_Support_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer1_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset"    material="CarbonFiber_Vertex" />
+                <sensitive distance="VertexBarrel_r1+VertexBarrel_DoubleLayer_Thickness-VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer1_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer1_offset" material="Silicon"/>
             </layer>
             
             <layer nLadders="VertexBarrel_Layer2_Staves" phi0="0" id="2">
-                <ladder distance="VertexBarrel_r2+VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer2_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset"    material="CarbonFiber_Vertex" />
+                <ladder distance="VertexBarrel_r2+VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer2_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset"    material="CarbonFiber_Vertex" />
                 <sensitive distance="VertexBarrel_r2" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer2_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset" material="Silicon"/>
             </layer>
             <layer nLadders="VertexBarrel_Layer2_Staves" phi0="0" id="3">
-                <ladder distance="VertexBarrel_r2+VertexBarrel_Sensitive_Thickness+VertexBarrel_Support_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer2_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset"    material="CarbonFiber_Vertex" />
-                <sensitive distance="VertexBarrel_r2+VertexBarrel_Sensitive_Thickness+2*VertexBarrel_Support_Thickness" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer2_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset" material="Silicon"/>
+                <ladder distance="VertexBarrel_r2+VertexBarrel_DoubleLayer_Thickness-VertexBarrel_Sensitive_Thickness-VertexBarrel_Support_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer2_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset"    material="CarbonFiber_Vertex" />
+                <sensitive distance="VertexBarrel_r2+VertexBarrel_DoubleLayer_Thickness-VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer2_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer2_offset" material="Silicon"/>
             </layer>
             
             
             <layer nLadders="VertexBarrel_Layer3_Staves" phi0="0" id="4">
-                <ladder distance="VertexBarrel_r3+VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer3_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset"    material="CarbonFiber_Vertex" />
+                <ladder distance="VertexBarrel_r3+VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer3_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset"    material="CarbonFiber_Vertex" />
                 <sensitive distance="VertexBarrel_r3" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer3_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset" material="Silicon"/>
             </layer>
             <layer nLadders="VertexBarrel_Layer3_Staves" phi0="0" id="5">
-                <ladder distance="VertexBarrel_r3+VertexBarrel_Sensitive_Thickness+VertexBarrel_Support_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer3_width-1.2*mm" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset"    material="CarbonFiber_Vertex" />
-                <sensitive distance="VertexBarrel_r3+VertexBarrel_Sensitive_Thickness+2*VertexBarrel_Support_Thickness" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer3_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset" material="Silicon"/>
+                <ladder distance="VertexBarrel_r3+VertexBarrel_DoubleLayer_Thickness-VertexBarrel_Sensitive_Thickness-VertexBarrel_Support_Thickness" thickness="VertexBarrel_Support_Thickness" width="VertexBarrel_Layer3_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset"    material="CarbonFiber_Vertex" />
+                <sensitive distance="VertexBarrel_r3+VertexBarrel_DoubleLayer_Thickness-VertexBarrel_Sensitive_Thickness" thickness="VertexBarrel_Sensitive_Thickness" width="VertexBarrel_Layer3_width" length="VertexBarrel_zmax" offset="VertexBarrel_Layer3_offset" material="Silicon"/>
             </layer>
             
         </detector>

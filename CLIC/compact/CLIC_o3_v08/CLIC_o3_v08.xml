@@ -220,9 +220,9 @@
     <include ref="Beampipe_o1_v01_02.xml"/>
     <include ref="BeamInstrumentation_o1_v01_01.xml"/>
 
-    <include ref="Vertex_o2_v05_02.xml"/>
+    <include ref="Vertex_o2_v06_01.xml"/>
 
-    <include ref="InnerTracker_o2_v05_02.xml"/>
+    <!--include ref="InnerTracker_o2_v05_02.xml"/>
     <include ref="OuterTracker_o2_v05_02.xml"/>
 
     <include ref="ECalBarrel_o2_v01_02.xml"/>
@@ -239,7 +239,7 @@
 
     <include ref="LumiCal_o1_v01_01.xml"/>
 
-    <include ref="BeamCal_o1_v01_01.xml"/>
+    <include ref="BeamCal_o1_v01_01.xml"/-->
 
     <plugins>
         <plugin name="InstallSurfaceManager"/>
